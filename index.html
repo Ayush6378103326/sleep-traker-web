@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sleep Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- パート1：ナビゲーションバー -->
+  <nav>
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="log.html">Sleep Log</a>
+    <a href="tips.html">Tips</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- パート2：メインヘッダー -->
+  <header>
+    <h1>Sleep Tracker</h1>
+    <p>Track and improve your sleep habits daily.</p>
+  </header>
+
+  <!-- パート3：入力セクション -->
+  <section class="input-section">
+    <h2>Log Your Sleep</h2>
+    <form id="sleepForm">
+      <label for="sleepDate">Date:</label>
+      <input type="date" id="sleepDate" required />
+      <label for="sleepHours">Hours Slept:</label>
+      <input type="number" id="sleepHours" min="0" max="24" step="0.1" required />
+      <button type="submit">Save</button>
+    </form>
+  </section>
+
+  <!-- パート4：チャート -->
+  <section class="chart-section">
+    <h2>Sleep Trend</h2>
+    <canvas id="sleepChart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
